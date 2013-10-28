@@ -1,4 +1,5 @@
 # PHPSession::Rails
+[![Build Status](https://travis-ci.org/Shinpeim/php_session-rails.png?branch=master)](https://travis-ci.org/Shinpeim/php_session-rails)
 
 Add PHP session compatibility on your rails application.
 
