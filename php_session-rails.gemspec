@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["shinpeim@gmail.com"]
   spec.description   = %q{Read/write php session file from Ruby on Rails}
   spec.summary       = %q{Read/write php session file from Ruby on Rails. Multibyte strings are spported.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/Shinpeim/php_session-rails"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
