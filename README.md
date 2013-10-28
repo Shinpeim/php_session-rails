@@ -1,6 +1,6 @@
-# PhpSession::Rails
+# PHPSession::Rails
 
-TODO: Write a gem description
+Add PHP session compatibility on your rails application.
 
 ## Installation
 
@@ -10,7 +10,7 @@ Add this line to your application's Gemfile:
 
 And then execute:
 
-    $ bundle
+    $ bundle install
 
 Or install it yourself as:
 
@@ -18,7 +18,25 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Gemfile :
+
+```
+gem 'php_session-rails'
+```
+
+rails_root/config/initializers/session_store.rb:
+
+```
+your::Application.config.session_store :php_store, {
+  :session_file_dir => "/path/to/session_file_dir",
+  :file_options => {
+    :internal_encoding => 'UTF-8', # encoding in rails
+    :external_encoding => 'EUC-JP',# encoding in php session
+    :encoding_option => {:undef => :replace} # passed to String#encode
+  }
+}
+```
+
 
 ## Contributing
 
