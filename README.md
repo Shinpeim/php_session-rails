@@ -28,13 +28,12 @@ gem 'php_session-rails'
 rails_root/config/initializers/session_store.rb:
 
 ```
+# options are passed to rakc_session_php
 your::Application.config.session_store :php_store, {
   :session_file_dir => "/path/to/session_file_dir",
-  :file_options => {
-    :internal_encoding => 'UTF-8', # encoding in rails
-    :external_encoding => 'EUC-JP',# encoding in php session
-    :encoding_option => {:undef => :replace} # passed to String#encode
-  }
+  :internal_encoding => 'UTF-8', # encoding in rails
+  :external_encoding => 'EUC-JP',# encoding in php session
+  :encoding_option => {:undef => :replace} # passed to String#encode
 }
 ```
 
